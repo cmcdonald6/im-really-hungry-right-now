@@ -97,7 +97,7 @@ app.post('/updateDrink/:id', async (req, res) => {
     client.connect; 
     const collection = client.db("chillAppz").collection("drinkz");
     let result = await collection.findOneAndUpdate( 
-      { _id: new ObjectId( req.params.id)}, {$set:{ "size": "Extra large"}})
+      { _id: new ObjectId( req.params.id)}, {$set:{ "size": "big boy size"}})
     .then(result => {
       console.log(result); 
       res.redirect('/');
